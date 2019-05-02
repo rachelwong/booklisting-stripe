@@ -13,11 +13,13 @@
     books: [
       {
         title: "The Great Gatsby",
-        image: "https://images.gr-assets.com/books/1490528560l/4671.jpg"
+        image: "https://images.gr-assets.com/books/1490528560l/4671.jpg",
+        price: 20
       },
       {
         title: "The Curios Case of Benjamin Button",
-        image: "https://images.gr-assets.com/books/1331235364l/747746.jpg"
+        image: "https://images.gr-assets.com/books/1331235364l/747746.jpg",
+        price: 20
       }
     ]
   },
@@ -27,15 +29,18 @@
     books: [
       {
         title: "Carrie",
-        image: "https://upload.wikimedia.org/wikipedia/en/3/31/Carrienovel.jpg"
+        image: "https://upload.wikimedia.org/wikipedia/en/3/31/Carrienovel.jpg",
+        price: 30
       },
       {
 
         title: "The Shining",
-        image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Shiningnovel.jpg"
+        image: "https://upload.wikimedia.org/wikipedia/en/4/4c/Shiningnovel.jpg",
+        price: 30
       }, {
         title: "The Stand",
-        image: "https://upload.wikimedia.org/wikipedia/en/9/96/The_Stand_cover.jpg"
+        image: "https://upload.wikimedia.org/wikipedia/en/9/96/The_Stand_cover.jpg",
+        price: 30
       }
 
     ]
@@ -45,24 +50,37 @@
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/440px-J._K._Rowling_2010.jpg",
     books: [
       { title: "The Philosopher's Stone",
-        image: "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg",
+        price: 40
+      },
       { title: "The Chamber of Secrets",
-        image: "https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg",
+        price: 40 },
       { title: "The Prisoner of Azkaban",
-        image: "https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpgj" },
+        image: "https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpgj",
+        price: 40
+      },
       { title: "The Goblet of Fire",
-        image: "https://upload.wikimedia.org/wikipedia/en/c/c7/Harry_Potter_and_the_Goblet_of_Fire.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/en/c/c7/Harry_Potter_and_the_Goblet_of_Fire.jpg",
+        price: 40
+      },
       { title: "The Order of the Phoenix",
-        image: "https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg",
+        price: 40
+      },
       { title: "The Half-Blood Prince",
-        image: "https://upload.wikimedia.org/wikipedia/en/f/f0/Harry_Potter_and_the_Half-Blood_Prince.jpg" },
+        image: "https://upload.wikimedia.org/wikipedia/en/f/f0/Harry_Potter_and_the_Half-Blood_Prince.jpg",
+        price: 40 
+      },
       { title: "The Deathly Hallows",
-        image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" }
+        image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg",
+        price: 40
+      }
     ]
   }
 ].each do |author|
   resource = Author.create!(name: author[:name], url_image: author[:image])
   author[:books].each do |book|
-    Book.create!(title: book[:title], url_image: book[:image], author: resource)
+    Book.create!(title: book[:title], url_image: book[:image], price: book[:price], author: resource)
   end
 end

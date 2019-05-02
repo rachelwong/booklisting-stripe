@@ -1,3 +1,3 @@
-## Rails Books Listing App
+## Rails Books Listing App WITH STRIPE
 
-Four attempt to follow Matt Stubbs Tutorial
+Attempt number five finally got stripe to work with a success page for acknowledgement

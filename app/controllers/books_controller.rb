@@ -1,10 +1,8 @@
 class BooksController < ApplicationController
-  # to create a new book
-
   def index
 
   end
-
+  # to create a new book
   def new
     # instance variable accessible in the view
     @authors = Author.all
